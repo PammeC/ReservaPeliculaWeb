@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="registrarReserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaSeleccionada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pelicula" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrarReservaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarClientesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listarPeliculas">
+        <s:complexType />
+      </s:element>
+      <s:element name="listarPeliculasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listarPeliculasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerReserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="condicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraerReservaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarReserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="íd" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarReservaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarReserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pelicula" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificarReservaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularPrecioTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularPrecioTotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularPrecioTotalResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTotalReservasRegistradas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTotalReservasRegistradasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerTotalReservasRegistradasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNombrePelicula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idPelicula" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNombrePeliculaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNombrePeliculaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registrarReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:registrarReserva" />
+  </wsdl:message>
+  <wsdl:message name="registrarReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:registrarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:listarClientes" />
+  </wsdl:message>
+  <wsdl:message name="listarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:listarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="listarPeliculasSoapIn">
+    <wsdl:part name="parameters" element="tns:listarPeliculas" />
+  </wsdl:message>
+  <wsdl:message name="listarPeliculasSoapOut">
+    <wsdl:part name="parameters" element="tns:listarPeliculasResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraerReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:TraerReserva" />
+  </wsdl:message>
+  <wsdl:message name="TraerReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:TraerReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarReserva" />
+  </wsdl:message>
+  <wsdl:message name="eliminarReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificarReserva" />
+  </wsdl:message>
+  <wsdl:message name="modificarReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularPrecioTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularPrecioTotal" />
+  </wsdl:message>
+  <wsdl:message name="CalcularPrecioTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularPrecioTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTotalReservasRegistradasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTotalReservasRegistradas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTotalReservasRegistradasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTotalReservasRegistradasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNombrePeliculaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNombrePelicula" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNombrePeliculaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNombrePeliculaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReservaSoap">
+    <wsdl:operation name="registrarReserva">
+      <wsdl:input message="tns:registrarReservaSoapIn" />
+      <wsdl:output message="tns:registrarReservaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarClientes">
+      <wsdl:input message="tns:listarClientesSoapIn" />
+      <wsdl:output message="tns:listarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listarPeliculas">
+      <wsdl:input message="tns:listarPeliculasSoapIn" />
+      <wsdl:output message="tns:listarPeliculasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraerReserva">
+      <wsdl:input message="tns:TraerReservaSoapIn" />
+      <wsdl:output message="tns:TraerReservaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarReserva">
+      <wsdl:input message="tns:eliminarReservaSoapIn" />
+      <wsdl:output message="tns:eliminarReservaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarReserva">
+      <wsdl:input message="tns:modificarReservaSoapIn" />
+      <wsdl:output message="tns:modificarReservaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularPrecioTotal">
+      <wsdl:input message="tns:CalcularPrecioTotalSoapIn" />
+      <wsdl:output message="tns:CalcularPrecioTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalReservasRegistradas">
+      <wsdl:input message="tns:ObtenerTotalReservasRegistradasSoapIn" />
+      <wsdl:output message="tns:ObtenerTotalReservasRegistradasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombrePelicula">
+      <wsdl:input message="tns:ObtenerNombrePeliculaSoapIn" />
+      <wsdl:output message="tns:ObtenerNombrePeliculaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReservaSoap" type="tns:ReservaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarReserva">
+      <soap:operation soapAction="http://tempuri.org/registrarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarClientes">
+      <soap:operation soapAction="http://tempuri.org/listarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPeliculas">
+      <soap:operation soapAction="http://tempuri.org/listarPeliculas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerReserva">
+      <soap:operation soapAction="http://tempuri.org/TraerReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarReserva">
+      <soap:operation soapAction="http://tempuri.org/eliminarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarReserva">
+      <soap:operation soapAction="http://tempuri.org/modificarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularPrecioTotal">
+      <soap:operation soapAction="http://tempuri.org/CalcularPrecioTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalReservasRegistradas">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTotalReservasRegistradas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombrePelicula">
+      <soap:operation soapAction="http://tempuri.org/ObtenerNombrePelicula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReservaSoap12" type="tns:ReservaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarReserva">
+      <soap12:operation soapAction="http://tempuri.org/registrarReserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarClientes">
+      <soap12:operation soapAction="http://tempuri.org/listarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPeliculas">
+      <soap12:operation soapAction="http://tempuri.org/listarPeliculas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerReserva">
+      <soap12:operation soapAction="http://tempuri.org/TraerReserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarReserva">
+      <soap12:operation soapAction="http://tempuri.org/eliminarReserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarReserva">
+      <soap12:operation soapAction="http://tempuri.org/modificarReserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularPrecioTotal">
+      <soap12:operation soapAction="http://tempuri.org/CalcularPrecioTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalReservasRegistradas">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTotalReservasRegistradas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombrePelicula">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerNombrePelicula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Reserva">
+    <wsdl:port name="ReservaSoap" binding="tns:ReservaSoap">
+      <soap:address location="https://localhost:44335/WS/Reserva.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReservaSoap12" binding="tns:ReservaSoap12">
+      <soap12:address location="https://localhost:44335/WS/Reserva.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

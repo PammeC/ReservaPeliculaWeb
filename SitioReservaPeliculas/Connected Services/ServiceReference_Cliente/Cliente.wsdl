@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="mostrarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="condicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mostrarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mostrarClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrarClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validarUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="íd" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificarClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mostrarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:mostrarCliente" />
+  </wsdl:message>
+  <wsdl:message name="mostrarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:mostrarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:registrarCliente" />
+  </wsdl:message>
+  <wsdl:message name="registrarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:registrarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:validarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="validarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:validarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="eliminarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:modificarCliente" />
+  </wsdl:message>
+  <wsdl:message name="modificarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:modificarClienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClienteSoap">
+    <wsdl:operation name="mostrarCliente">
+      <wsdl:input message="tns:mostrarClienteSoapIn" />
+      <wsdl:output message="tns:mostrarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarCliente">
+      <wsdl:input message="tns:registrarClienteSoapIn" />
+      <wsdl:output message="tns:registrarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarUsuario">
+      <wsdl:input message="tns:validarUsuarioSoapIn" />
+      <wsdl:output message="tns:validarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <wsdl:input message="tns:eliminarClienteSoapIn" />
+      <wsdl:output message="tns:eliminarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarCliente">
+      <wsdl:input message="tns:modificarClienteSoapIn" />
+      <wsdl:output message="tns:modificarClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClienteSoap" type="tns:ClienteSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mostrarCliente">
+      <soap:operation soapAction="http://tempuri.org/mostrarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarCliente">
+      <soap:operation soapAction="http://tempuri.org/registrarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarUsuario">
+      <soap:operation soapAction="http://tempuri.org/validarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/eliminarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCliente">
+      <soap:operation soapAction="http://tempuri.org/modificarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClienteSoap12" type="tns:ClienteSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mostrarCliente">
+      <soap12:operation soapAction="http://tempuri.org/mostrarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarCliente">
+      <soap12:operation soapAction="http://tempuri.org/registrarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/validarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <soap12:operation soapAction="http://tempuri.org/eliminarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCliente">
+      <soap12:operation soapAction="http://tempuri.org/modificarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cliente">
+    <wsdl:port name="ClienteSoap" binding="tns:ClienteSoap">
+      <soap:address location="https://localhost:44335/WS/Cliente.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClienteSoap12" binding="tns:ClienteSoap12">
+      <soap12:address location="https://localhost:44335/WS/Cliente.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

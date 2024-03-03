@@ -1,0 +1,403 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8B84599-D537-4FDC-A139-4C9F86CE2303}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SitioReservaPeliculas</RootNamespace>
+    <AssemblyName>SitioReservaPeliculas</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <IISExpressSSLPort>44318</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference_Categoria\Categoria.disco" />
+    <None Include="Connected Services\ServiceReference_Categoria\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Categoria\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Categoria\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReference_Cliente\Cliente.wsdl" />
+    <Content Include="Connected Services\ServiceReference_Cliente\SitioReservaPeliculas.ServiceReference_Cliente.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Cliente\SitioReservaPeliculas.ServiceReference_Cliente.modificarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Cliente\SitioReservaPeliculas.ServiceReference_Cliente.mostrarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Cliente\SitioReservaPeliculas.ServiceReference_Cliente.registrarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Cliente\SitioReservaPeliculas.ServiceReference_Cliente.validarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference_Pelicula\Pelicula.wsdl" />
+    <None Include="Connected Services\ServiceReference_Cliente\Cliente.disco" />
+    <None Include="Connected Services\ServiceReference_Cliente\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Cliente\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Cliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ServiceReference_Pelicula\SitioReservaPeliculas.ServiceReference_Pelicula.eliminarPeliculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Pelicula\SitioReservaPeliculas.ServiceReference_Pelicula.listarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Pelicula\SitioReservaPeliculas.ServiceReference_Pelicula.modificarPeliculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Pelicula\SitioReservaPeliculas.ServiceReference_Pelicula.mostrarPeliculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Pelicula\SitioReservaPeliculas.ServiceReference_Pelicula.registrarPeliculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference_Reserva\Reserva.disco" />
+    <None Include="Connected Services\ServiceReference_Reserva\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Reserva\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Reserva\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceReference_Pelicula\Pelicula.disco" />
+    <None Include="Connected Services\ServiceReference_Pelicula\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Pelicula\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Pelicula\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\ServiceReference_Usuario\SitioReservaPeliculas.ServiceReference_Usuario.registrarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference_Reserva\Reserva.wsdl" />
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.eliminarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.listarClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.listarPeliculasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.modificarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.ObtenerNombrePeliculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.registrarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Reserva\SitioReservaPeliculas.ServiceReference_Reserva.TraerReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference_Usuario\Usuario.disco" />
+    <None Include="Connected Services\ServiceReference_Usuario\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Usuario\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference_Usuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="css\stylesBootstrap.css" />
+    <Content Include="css\stylesLogin.css" />
+    <Content Include="css\stylesRegister.css" />
+    <Content Include="img\avataaars.svg" />
+    <Content Include="img\cardio.jpeg" />
+    <Content Include="img\CitaSaludLogo.ico" />
+    <Content Include="img\dental.jpeg" />
+    <Content Include="img\derma.jpg" />
+    <Content Include="img\doc.png" />
+    <Content Include="img\FondoAzul.png" />
+    <Content Include="img\FondoAzulLogo.png" />
+    <Content Include="img\FondoCeleste.png" />
+    <Content Include="img\fondoceleste1.png" />
+    <Content Include="img\fondoLogin.png" />
+    <Content Include="img\fondoMedicos.png" />
+    <Content Include="img\gene.jpeg" />
+    <Content Include="img\login-bg.png" />
+    <Content Include="img\pedia.jpeg" />
+    <Content Include="img\psico.jpg" />
+    <Content Include="UI\InicioReservaPelicula.aspx" />
+    <Content Include="UI\InicioSesion.aspx" />
+    <Content Include="UI\ListadoCategorias.aspx" />
+    <Content Include="UI\ListadoClientes.aspx" />
+    <Content Include="UI\ListadoPeliculas.aspx" />
+    <Content Include="UI\ListadoReservas.aspx" />
+    <Content Include="UI\PrincipalAdmin.aspx" />
+    <Content Include="UI\PrincipalUsuario.aspx" />
+    <Content Include="UI\RegistroCategorias.aspx" />
+    <Content Include="UI\RegistroClientes.aspx" />
+    <Content Include="UI\RegistroPeliculas.aspx" />
+    <Content Include="UI\RegistroReservas.aspx" />
+    <Content Include="UI\RegistroUsuario.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Connected Services\ServiceReference_Categoria\SitioReservaPeliculas.ServiceReference_Categoria.eliminarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Categoria\SitioReservaPeliculas.ServiceReference_Categoria.modificarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Categoria\SitioReservaPeliculas.ServiceReference_Categoria.registrarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference_Categoria\SitioReservaPeliculas.ServiceReference_Categoria.TraerCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\ServiceReference_Categoria\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference_Cliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference_Pelicula\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference_Reserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference_Usuario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Categoria.cs" />
+    <Compile Include="Modelos\Cliente.cs" />
+    <Compile Include="Modelos\Pelicula.cs" />
+    <Compile Include="Modelos\Reserva.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\InicioReservaPelicula.aspx.cs">
+      <DependentUpon>InicioReservaPelicula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\InicioReservaPelicula.aspx.designer.cs">
+      <DependentUpon>InicioReservaPelicula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InicioSesion.aspx.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\InicioSesion.aspx.designer.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListadoCategorias.aspx.cs">
+      <DependentUpon>ListadoCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ListadoCategorias.aspx.designer.cs">
+      <DependentUpon>ListadoCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListadoClientes.aspx.cs">
+      <DependentUpon>ListadoClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ListadoClientes.aspx.designer.cs">
+      <DependentUpon>ListadoClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListadoPeliculas.aspx.cs">
+      <DependentUpon>ListadoPeliculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ListadoPeliculas.aspx.designer.cs">
+      <DependentUpon>ListadoPeliculas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListadoReservas.aspx.cs">
+      <DependentUpon>ListadoReservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ListadoReservas.aspx.designer.cs">
+      <DependentUpon>ListadoReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrincipalAdmin.aspx.cs">
+      <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PrincipalAdmin.aspx.designer.cs">
+      <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrincipalUsuario.aspx.cs">
+      <DependentUpon>PrincipalUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PrincipalUsuario.aspx.designer.cs">
+      <DependentUpon>PrincipalUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroCategorias.aspx.cs">
+      <DependentUpon>RegistroCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroCategorias.aspx.designer.cs">
+      <DependentUpon>RegistroCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroClientes.aspx.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroClientes.aspx.designer.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroPeliculas.aspx.cs">
+      <DependentUpon>RegistroPeliculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroPeliculas.aspx.designer.cs">
+      <DependentUpon>RegistroPeliculas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroReservas.aspx.cs">
+      <DependentUpon>RegistroReservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroReservas.aspx.designer.cs">
+      <DependentUpon>RegistroReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference_Categoria\Categoria.wsdl" />
+    <None Include="Connected Services\ServiceReference_Usuario\Usuario.wsdl" />
+    <None Include="packages.config" />
+    <Content Include="UI\Layout.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference_Categoria\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference_Cliente\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference_Pelicula\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference_Reserva\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference_Usuario\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50053</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44318/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioReservaPeliculas", "ServicioReservaPeliculas\ServicioReservaPeliculas.csproj", "{84D34893-FA9C-499E-B0DC-B7A3643CF9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitioReservaPeliculas", "SitioReservaPeliculas\SitioReservaPeliculas.csproj", "{B8B84599-D537-4FDC-A139-4C9F86CE2303}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84D34893-FA9C-499E-B0DC-B7A3643CF9DE} = {84D34893-FA9C-499E-B0DC-B7A3643CF9DE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84D34893-FA9C-499E-B0DC-B7A3643CF9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D34893-FA9C-499E-B0DC-B7A3643CF9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D34893-FA9C-499E-B0DC-B7A3643CF9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D34893-FA9C-499E-B0DC-B7A3643CF9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B84599-D537-4FDC-A139-4C9F86CE2303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B84599-D537-4FDC-A139-4C9F86CE2303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B84599-D537-4FDC-A139-4C9F86CE2303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B84599-D537-4FDC-A139-4C9F86CE2303}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D9CD05E-6B8A-40D7-8CCE-4453F7635862}
+	EndGlobalSection
+EndGlobal

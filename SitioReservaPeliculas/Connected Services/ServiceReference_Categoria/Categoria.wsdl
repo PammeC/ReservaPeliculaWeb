@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="registrarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrarCategoriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="condicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraerCategoriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="íd" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarCategoriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificarCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificarCategoriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registrarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:registrarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="registrarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:registrarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraerCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:TraerCategoria" />
+  </wsdl:message>
+  <wsdl:message name="TraerCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:TraerCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="eliminarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificarCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="modificarCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CategoriaSoap">
+    <wsdl:operation name="registrarCategoria">
+      <wsdl:input message="tns:registrarCategoriaSoapIn" />
+      <wsdl:output message="tns:registrarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraerCategoria">
+      <wsdl:input message="tns:TraerCategoriaSoapIn" />
+      <wsdl:output message="tns:TraerCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCategoria">
+      <wsdl:input message="tns:eliminarCategoriaSoapIn" />
+      <wsdl:output message="tns:eliminarCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarCategoria">
+      <wsdl:input message="tns:modificarCategoriaSoapIn" />
+      <wsdl:output message="tns:modificarCategoriaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CategoriaSoap" type="tns:CategoriaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarCategoria">
+      <soap:operation soapAction="http://tempuri.org/registrarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerCategoria">
+      <soap:operation soapAction="http://tempuri.org/TraerCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCategoria">
+      <soap:operation soapAction="http://tempuri.org/eliminarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCategoria">
+      <soap:operation soapAction="http://tempuri.org/modificarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CategoriaSoap12" type="tns:CategoriaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/registrarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerCategoria">
+      <soap12:operation soapAction="http://tempuri.org/TraerCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/eliminarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCategoria">
+      <soap12:operation soapAction="http://tempuri.org/modificarCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Categoria">
+    <wsdl:port name="CategoriaSoap" binding="tns:CategoriaSoap">
+      <soap:address location="https://localhost:44335/WS/Categoria.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CategoriaSoap12" binding="tns:CategoriaSoap12">
+      <soap12:address location="https://localhost:44335/WS/Categoria.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
