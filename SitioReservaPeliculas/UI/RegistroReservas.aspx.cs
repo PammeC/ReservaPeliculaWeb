@@ -51,7 +51,7 @@ namespace SitioReservaPeliculas.UI
         {
             String mensajeR = "";
             String selectedDate = datePicker.Text;
-            String selectedTime = timePicker.Value;
+            String selectedTime = timePicker.Text;
 
             if (Convert.ToInt32(DropDownList_Cliente.SelectedValue) != 0 && selectedDate != "" && selectedTime != "" && Convert.ToInt32(DropDownList_Pelicula.SelectedValue) != 0)
             {
@@ -69,7 +69,7 @@ namespace SitioReservaPeliculas.UI
                 Label_Info.Text = mensajeR;
                 DropDownList_Cliente.SelectedIndex = 0;
                 datePicker.Text = "";
-                timePicker.Value = "";
+                timePicker.Text = "";
                 DropDownList_Pelicula.SelectedIndex = 0;
                 Alerta = false;
                 Info = true;

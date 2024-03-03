@@ -71,22 +71,10 @@
                                 </div>
                             </div>
                             <div class="form-group">                            
-                                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-                                <input type="text" id="timePicker" runat="server" />
-                                <script>
-                                        $(function () {
-                                            // Configuración del timePicker
-                                            $('#timePicker').timepicker({
-                                                'timeFormat': 'H:i', // Formato de 24 horas
-                                                'minTime': '09:00', // Hora mínima
-                                                'maxTime': '17:00', // Hora máxima
-                                                'step': 60, // Intervalo de minutos
-                                                'disableTextInput': true // Deshabilitar la entrada de texto manual
-                                            });
-                                        });
-                                </script>
+                                 <asp:Label ID="Label7" runat="server" Text="Seleccione hora reserva"></asp:Label>
+                                <!-- Cuadro de texto para seleccionar hora de la reserva -->
+                                <asp:TextBox ID="timePicker" runat="server" CssClass="time-picker"></asp:TextBox>sss
+   
                                 </div>
                         </div>
                     </div>
