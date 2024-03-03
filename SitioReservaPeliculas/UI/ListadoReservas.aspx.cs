@@ -81,5 +81,10 @@ namespace SitioReservaPeliculas.UI
             String mensaje = reserva.eliminarReserva(rowId); // Llama al método del servicio web para eliminar una reserva.
             return mensaje; // Retorna "success" o "error" en caso de fallo.
         }
+
+        public string ObtenerFechaSinHoraEnFormato(DateTime fechaConHora)
+        {
+            return fechaConHora.ToString("dd/MM/yyyy");
+        }
     }
 }

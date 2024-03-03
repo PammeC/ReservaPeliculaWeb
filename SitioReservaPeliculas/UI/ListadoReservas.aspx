@@ -34,14 +34,17 @@
                                         <asp:TextBox ID="TextBoxCliente" runat="server" Text='<%# Bind("Cliente") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
+                                
                                 <asp:TemplateField HeaderText="Fecha">
                                     <ItemTemplate>
-                                        <asp:Label ID="LabelFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
+                                        <asp:Label ID="LabelFecha" runat="server" Text='<%# ObtenerFechaSinHoraEnFormato(Convert.ToDateTime(Eval("Fecha"))) %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="TextBoxFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:TextBox>
+                                        <asp:TextBox ID="TextBoxFecha" runat="server" Text='<%# ObtenerFechaSinHoraEnFormato(Convert.ToDateTime(Eval("Fecha"))) %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
+
+
                                 <asp:TemplateField HeaderText="Hora">
                                     <ItemTemplate>
                                         <asp:Label ID="LabelHora" runat="server" Text='<%# Bind("Hora") %>'></asp:Label>

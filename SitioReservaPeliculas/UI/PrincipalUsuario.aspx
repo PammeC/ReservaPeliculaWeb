@@ -27,7 +27,14 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="RegistroReservas.aspx">Nueva Reserva</a></li>
+                        <%--<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="RegistroReservas.aspx">Nueva Reserva</a></li>--%>
+
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <asp:HyperLink ID="HyperLinkNuevaReserva" runat="server" CssClass="nav-link" NavigateUrl="RegistroReservas.aspx">Nueva Reserva</asp:HyperLink>
+                        </li>
+
+
+
                         <asp:Button type="button" class="btn btn-danger" OnClick="btnCerrar_Click" runat="server" Text="Cerrar Sesión"></asp:Button>
                     </ul>
                 </div>
@@ -91,16 +98,16 @@
                                     </EditItemTemplate>
                                 </asp:TemplateField>
 
-
-
                                 <asp:TemplateField HeaderText="Fecha">
                                     <ItemTemplate>
-                                        <asp:Label ID="LabelFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
+                                        <asp:Label ID="LabelFecha" runat="server" Text='<%# ObtenerFechaSinHoraEnFormato(Convert.ToDateTime(Eval("Fecha"))) %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="TextBoxFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:TextBox>
+                                        <asp:TextBox ID="TextBoxFecha" runat="server" Text='<%# ObtenerFechaSinHoraEnFormato(Convert.ToDateTime(Eval("Fecha"))) %>'></asp:TextBox>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
+
+                               
 
                             </Columns>
                         </asp:GridView>

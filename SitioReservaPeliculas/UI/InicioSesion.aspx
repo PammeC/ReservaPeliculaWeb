@@ -44,7 +44,7 @@
 
                 <!-- Campo de entrada para el nombre de usuario -->
                 <div class="login__box-input">
-                    <label for="username" runat="server">Nombre de usuario:</label>
+                    <label for="username" runat="server">Email:</label>
                     <div class="textbox-icon">
                         <i class="ri-user-3-line login__icon"></i>
                         <asp:TextBox ID="username" runat="server" Text="" CssClass="form-control"></asp:TextBox>

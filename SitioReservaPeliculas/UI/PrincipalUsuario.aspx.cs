@@ -29,8 +29,10 @@ namespace SitioReservaPeliculas.UI
             Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
             Response.Cache.SetNoStore();
 
-
+            HyperLinkNuevaReserva.NavigateUrl = "RegistroReservas.aspx";
         }
+    
+        
         private void CargarGrid()
         {
             String jsonResult = reserva.TraerReserva(Session["ClienteLogeado"].ToString()); // Obtiene datos de reservas en formato JSON.
@@ -127,6 +129,11 @@ namespace SitioReservaPeliculas.UI
             {
                 return string.Empty;
             }
+        }
+
+        public string ObtenerFechaSinHoraEnFormato(DateTime fechaConHora)
+        {
+            return fechaConHora.ToString("dd/MM/yyyy");
         }
 
     }
