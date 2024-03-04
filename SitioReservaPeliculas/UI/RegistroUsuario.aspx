@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Registro Usuario</title>
+    <title>CINEMAK</title>
 
     <!-- Icono de la página -->
-    <link rel="icon" type="image/x-icon" href="../img/CitaSaludLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/palomitas-de-maiz.ico" />
 
     <!-- Estilos de la página -->
     <link href="../css/stylesRegister.css" rel="stylesheet" />

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Layout.Master" AutoEventWireup="true" CodeBehind="RegistroReservas.aspx.cs" Inherits="SitioReservaPeliculas.UI.RegistroReservas" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">Registro Peliculas</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">CINEMAK</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cuerpo" runat="server">
 
@@ -73,7 +73,7 @@
                             <div class="form-group">                            
                                  <asp:Label ID="Label7" runat="server" Text="Seleccione hora reserva"></asp:Label>
                                 <!-- Cuadro de texto para seleccionar hora de la reserva -->
-                                <asp:TextBox ID="timePicker" runat="server" CssClass="time-picker"></asp:TextBox>sss
+                                <asp:TextBox ID="timePicker" runat="server" CssClass="time-picker"></asp:TextBox>
    
                                 </div>
                         </div>

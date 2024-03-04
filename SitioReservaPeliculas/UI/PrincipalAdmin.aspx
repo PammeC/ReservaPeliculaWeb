@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ADMINISTRADOR</title>f
-    <link rel="icon" type="image/x-icon" href="../img/CitaSaludLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/palomitas-de-maiz.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/stylesBootstrap.css" rel="stylesheet" />
     <!-- Font Awesome icons (free version)-->
@@ -20,8 +20,8 @@
             <div class="container-fluid">
                 <div class="logo">
                     <a href="InicioCitaSalud.aspx">
-                        <img src="../img/CitaSaludLogo.ico" alt="" style="height: 50px; width: 80px" /></a>
-                    <a href="InicioCitaSalud.aspx" class="navbar-brand">CITA SALUD </a>
+                        <img src="../img/palomitas-de-maiz.ico" alt="" style="height: 80px; width: 80px" /></a>
+                    <a href="InicioCitaSalud.aspx" class="navbar-brand">CINEMAK</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
                     <span class="navbar-toggler-icon"></span>

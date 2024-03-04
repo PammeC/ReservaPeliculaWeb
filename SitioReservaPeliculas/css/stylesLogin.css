@@ -31,7 +31,8 @@ button {
 }
 
 body {
-  color: var(--white-color);
+    color: var(--white-color);
+    
 }
 
 input,
@@ -51,10 +52,13 @@ img {
 
 /*=============== LOGIN ===============*/
 .login {
-  position: relative;
-  height: 100vh;
-  display: grid;
-  align-items: center;
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-image: url(../img/fondocine.png);
+    background-size: cover; /* Ajusta el tamaño de la imagen al área del cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 .login__img {
   position: absolute;
@@ -200,9 +204,6 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    background-image: url('../img/fondoceleste1.png');
-    background-size: cover; /* Ajusta el tamaño de la imagen al área del cuerpo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 h1 {

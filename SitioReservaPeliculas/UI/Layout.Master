@@ -21,8 +21,8 @@
         <div class="container-fluid">
             <div class="logo">
                 <a href="InicioReservaPelicula.aspx">
-                    <img src="../img/CitaSaludLogo.ico" alt="" style="height: 50px; width: 80px" /></a>
-                <a href="InicioReservaPelicula.aspx" class="navbar-brand">RESERVA PELICULA </a>
+                    <img src="../img/palomitas-de-maiz.ico" alt="" style="height: 80px; width: 80px" /></a>
+                <a href="InicioReservaPelicula.aspx" class="navbar-brand">CINEMAK</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
                 <span class="navbar-toggler-icon"></span>

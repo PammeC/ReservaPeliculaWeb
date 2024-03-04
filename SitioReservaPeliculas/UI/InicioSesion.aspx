@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <title>Inicio Sesión</title>
+            <title>CINEMAK</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../img/CitaSaludLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/palomitas-de-maiz.ico" />
 
     <!-- CSS del tema principal (incluye Bootstrap) -->
     <link href="../css/stylesLogin.css" rel="stylesheet" />
@@ -72,7 +72,9 @@
 
             <!-- Sección de registro -->
             <div class="login__register">
+                
                 ¿No tienes una cuenta?
+                <hr>
                 <button type="button" class="register-button"></button>
                 <asp:Button type="button" class="btn btn-secondary" ID="Button1" runat="server" Text="Registrate" OnClick="miBoton_Click" />
             </div>

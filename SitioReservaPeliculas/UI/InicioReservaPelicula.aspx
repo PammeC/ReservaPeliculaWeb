@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Reserva Pelicula</title>
+    <title>CINEMAK</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../img/CitaSaludLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/palomitas-de-maiz.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/stylesBootstrap.css" rel="stylesheet" />
     <!-- Font Awesome icons (free version)-->
@@ -21,7 +21,8 @@
             <div class="logo">
                 <a href="InicioReservaPelicula.aspx">
                     <%-- Cambiar logoo --%>
-                    <img src="../img/CitaSaludLogo.ico" alt="" style="height: 50px; width: 80px" /></a>
+                    <img src="../img/palomitas-de-maiz.ico" alt="" style="height: 80px; width: 80px" /></a>
+                    <a href="InicioReservaPelicula.aspx" class="navbar-brand">CINEMAK</a>
             </div>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -29,10 +30,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="InicioSesion.aspx">Inicio Sesion</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                    
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Cartelera</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Acerca de Nosotros</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacto</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="InicioSesion.aspx">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -41,9 +43,9 @@
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="../img/avataaars.svg" alt="..." />
+            <img class="masthead-avatar mb-5" src="../img/giphy (6).gif" alt="..." />
             <!-- Masthead Heading-->
-            <h1 class="masthead-heading text-uppercase mb-0">BIENVENIDO A CITA SALUD !!</h1>
+            <h1 class="masthead-heading text-uppercase mb-0">BIENVENIDO A CINEMAK</h1>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -51,14 +53,14 @@
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">Tu Bienestar en Cada Cita</p>
+            <p class="masthead-subheading font-weight-light mb-0">Vive la Experiencia</p>
         </div>
     </header>
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Categorias</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cartelera</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -73,7 +75,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/gene.jpeg" alt="..." />
+                        <img class="img-fluid" src="../img/1.jpg" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
@@ -82,7 +84,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/pedia.jpeg" alt="..." />
+                        <img class="img-fluid" src="../img/madameweb.jpg" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
@@ -91,7 +93,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/cardio.jpeg" alt="..." />
+                        <img class="img-fluid" src="../img/duna.jpg" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 4-->
@@ -100,7 +102,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/dental.jpeg" alt="..." />
+                        <img class="img-fluid" src="../img/garfield.jpg" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 5-->
@@ -109,7 +111,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/psico.jpg" alt="..." />
+                        <img class="img-fluid" src="../img/HASHIRA.jpg" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 6-->
@@ -118,7 +120,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="../img/derma.jpg" alt="..." />
+                        <img class="img-fluid" src="../img/simio.jpg" alt="..." />
                     </div>
                 </div>
             </div>
@@ -138,7 +140,7 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="ms-auto">
-                    <p class="lead">En nuestro viaje por la innovación y el compromiso con la salud, damos vida a una aplicación que reimagina por completo la forma en que te conectas con el cuidado médico. Nuestra pasión radica en simplificar y mejorar cada aspecto del proceso de agendamiento de citas médicas, y lo hacemos con un enfoque que combina elegancia, claridad y profesionalismo en su máxima expresión. En un mundo donde el tiempo es un recurso valioso y la atención médica es esencial, nos hemos propuesto transformar la experiencia de programar citas en algo fluido, cómodo y digno de confianza. Nos enorgullecemos de ser la plataforma que une a clientes y profesionales de la salud en un espacio donde la eficiencia no sacrifica la excelencia. Bienvenidos a una nueva era en el agendamiento de citas médicas. Bienvenidos a la excelencia simplificada.</p>
+                    <p class="lead">Bienvenido a CINEMAK, tu destino cinematográfico en línea. Nos enorgullece ofrecerte una experiencia cinematográfica segura y sin complicaciones. Con una amplia selección de películas y un proceso de compra sencillo, te ofrecemos la conveniencia de comprar tus boletos de cine desde casa. Nuestra prioridad es tu seguridad, por lo que utilizamos tecnologías de cifrado avanzadas para proteger tus datos personales y financieros en cada transacción. Únete a nosotros y descubre la comodidad de disfrutar del cine en línea con total tranquilidad. ¡Gracias por elegir CINEMAL!</p>
                 </div>
             </div>
             <!-- About Section Button-->
@@ -242,10 +244,7 @@
                 <div class="col-lg-4">
                     <h4 class="text-uppercase mb-4">ACERCA DEL PROFESIONAL AUTÓNOMO</h4>
                     <p class="lead mb-0">
-                        Somos apasionados por la salud y el bienestar. 
-                           Ofrecemos citas inspiradoras para promover un estilo de vida saludable.
-                           Únete a nosotros en este viaje hacia una vida más equilibrada y feliz
-                           
+                       Únete a nosotros en  y experimenta la comodidad de comprar tus boletos de cine en línea de manera segura y sin complicaciones. ¡Esperamos ser tu destino cinematográfico preferido!
                            
                     </p>
                 </div>
@@ -254,7 +253,7 @@
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>Copyright &copy; CitasSalud 2023</small></div>
+        <div class="container"><small>Copyright &copy; CINEMAK 2024</small></div>
     </div>
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
@@ -269,7 +268,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Medicina General</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Arthur</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -277,10 +276,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/gene.jpeg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/1.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Descubre una atención médica integral y personalizada. Nuestra plataforma de agendamiento te conecta con expertos en medicina general para cuidar de tu bienestar en cada paso.</p>
-
+                                <p class="mb-4">Basada en una increíble historia real, Arthur the King sigue a Light, desesperado por una última oportunidad de ganar, mientras convence a un patrocinador para respaldarlo a él y a un equipo de atletas (Simu Liu, Nathalie Emmanuel y Ali Suliman) para el Campeonato Mundial de Carreras de Aventura en la República</p>
+                                <li>Precio: $ 4 </li>
+                                <hr>
+                                <li><a href="https://www.youtube.com/watch?v=wjDJNEPghNY&t=1s" target="_blank">TRAILER</a></li>
+                                <hr>
                             </div>
                         </div>
                     </div>
@@ -300,7 +302,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Pediatría</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Madame Web</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -308,10 +310,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/pedia.jpeg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/madameweb.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Creciendo con Confianza. Programa las consultas médicas de tus pequeños con especialistas en pediatría a través de nuestra aplicación, brindándoles el mejor comienzo en su vida.</p>
-
+                                <p class="mb-4">Madame Web cuenta la excepcional historia del origen de una de las heroínas más enigmáticas de Marvel. Un thriller de suspense protagonizado por Cassandra Webb, una paramédica en Manhattan que podría tener habilidades clarividentes.</p>
+                                 <li>Precio: $ 4 </li>
+                                 <hr>
+                                 <li><a href="https://www.youtube.com/watch?v=nqOjhXRrehA" target="_blank">TRAILER</a></li>
+                                 <hr>
                             </div>
                         </div>
                     </div>
@@ -331,7 +336,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cardiología</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">DUNE</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -339,10 +344,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/cardio.jpeg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/duna.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Latidos Saludables, Citas Sencillas. Reserva tiempo con cardiólogos de élite y prioriza tu salud cardiovascular de manera conveniente y elegante.</p>
-
+                                <p class="mb-4">Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia. Enfrentándose a una elección entre el amor de su vida y el destino del universo, debe evitar un futuro terrible.</p>
+                                 <li>Precio: $ 4 </li>
+                                 <hr>
+                                 <li><a href="https://www.youtube.com/watch?v=esezQhsrix0&t=1s" target="_blank">TRAILER</a></li>
+                                 <hr>
                             </div>
                         </div>
                     </div>
@@ -362,7 +370,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Odontología</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Garfield</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -370,10 +378,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/dental.jpeg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/garfield.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Sonrisas Brillantes, Citas Fáciles. Mantén tu salud bucal en excelente estado al programar citas con odontólogos expertos, todo desde la comodidad de tu dispositivo.</p>
-
+                                <p class="mb-4">El gato casero que odia los lunes y que adora la lasaña, está a punto de vivir una aventura ¡en el salvaje mundo exterior! Tras una inesperada reunión con su largamente perdido padre -el desaliñado gato callejero Vic.</p>
+                                 <li>Precio: $ 4 </li>
+                                 <hr>
+                                 <li><a href="https://www.youtube.com/watch?v=IeFWNtMo1Fs" target="_blank">TRAILER</a></li>
+                                 <hr>
                             </div>
                         </div>
                     </div>
@@ -393,7 +404,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Psicología Clínica</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Demon Slayer: Kimetsu No Yaiba - Rumbo Al Entrenamiento De Los Pilares</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -401,10 +412,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/psico.jpg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/HASHIRA.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Cuidado Mental de Primera Clase. Encuentra el equilibrio emocional al agendar citas con psicólogos clínicos altamente capacitados, apoyándote en cada paso de tu viaje.</p>
-
+                                <p class="mb-4">El “arco de entrenamiento Hashira” en “Demon Slayer: Kimetsu no Yaiba” es una emocionante y crucial etapa en la historia de los personajes principales. En este arco, los protagonistas se embarcan en un riguroso entrenamiento para convertirse en Hashiras, los pilares del Cuerpo de Exterminadores de Demonios.</p>
+                                 <li>Precio: $ 4 </li>
+                                 <hr>
+                                 <li><a href="https://www.youtube.com/watch?v=bgesBl2mF_M" target="_blank">TRAILER</a></li>
+                                 <hr>
                             </div>
                         </div>
                     </div>
@@ -424,7 +438,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Dermatología</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Planeta De Los Simios: Nuevo Reino</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -432,10 +446,13 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="../img/derma.jpg" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="../img/simio.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Belleza y Salud en Armonía. Reserva consultas con dermatólogos especializados para el cuidado de tu piel, confiando en nuestra plataforma elegante y fácil de usar.</p>
-
+                                <p class="mb-4">Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un angustioso viaje que le llevará a cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones que definirán el futuro de simios y humanos por igual</p>
+                                 <li>Precio: $ 4 </li>
+                                 <hr>
+                                 <li><a href="https://www.youtube.com/watch?v=OnvJonshS8s" target="_blank">TRAILER</a></li>
+                                 <hr>
                             </div>
                         </div>
                     </div>

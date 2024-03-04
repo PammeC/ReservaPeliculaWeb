@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>RESERVA PELICULA </title>
+    <title>CINEMAK</title>
 
-    <link rel="icon" type="image/x-icon" href="../img/ReservaSaludLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/palomitas-de-maiz.ico" />
     <link href="../css/stylesBootstrap.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +18,8 @@
             <div class="container">
                 <div class="logo">
                     <a href="InicioReservaPelicula.aspx">
-                        <img src="../img/ReservaSaludLogo.ico" alt="" style="height: 50px; width: 80px" /></a>
+                        <img src="../img/palomitas-de-maiz.ico" alt="" style="height: 80px; width: 80px" /></a>
+                         <a href="InicioReservaPelicula.aspx" class="navbar-brand">CINEMAK</a>
                 </div>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -48,7 +49,8 @@
         <hr />
 
         <div class="container mt-15 text-center">
-            <h1>Bienvenido !</h1>
+            <hr />
+            <h1>Bienvenido a CINEMAK!</h1>
         </div>
 
 
