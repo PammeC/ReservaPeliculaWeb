@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/UI/Layout.master" AutoEventWireup="true" CodeBehind="RegistroClientes.aspx.cs" Inherits="SitioReservaPeliculas.UI.RegistroClientes" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">Registro Pacientes</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">Registro Clientes</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cuerpo" runat="server">
 
     <!-- Contenedor para mostrar alertas de error -->
@@ -26,12 +26,12 @@
         </asp:Panel>
     </div>
 
-    <!-- Formulario para el registro de pacientes -->
+    <!-- Formulario para el registro de clientes -->
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <div class="card mt-5 text-center">
                 <div class="card-header">
-                    <h3>Registro Pacientes</h3>
+                    <h3>Registro Clientes</h3>
                 </div>
                 <div class="card-body">
                     <form id="form2" runat="server">

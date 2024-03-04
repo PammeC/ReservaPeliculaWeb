@@ -50,16 +50,16 @@ namespace SitioReservaPeliculas.UI
         {
             String mensajeR = "";
 
-            // Verificar si se ha ingresado un nombre de especialidad válido
+            // Verificar si se ha ingresado un nombre de categoria válido
             if (TextBox_Nombre.Text != "")
             {
-                // Llamar al método del servicio web para registrar una nueva especialidad
+                // Llamar al método del servicio web para registrar una nueva categoria
                 mensajeR = categoria.registrarCategoria(TextBox_Nombre.Text);
 
                 // Mostrar el mensaje de éxito en la etiqueta correspondiente
                 Label_Info.Text = mensajeR;
 
-                // Limpiar el campo de ingreso de nombre de especialidad
+                // Limpiar el campo de ingreso de nombre de categoria
                 TextBox_Nombre.Text = "";
 
                 // Asociar los valores a las propiedades para mostrar los mensajes en la página
@@ -69,7 +69,7 @@ namespace SitioReservaPeliculas.UI
             }
             else
             {
-                // Mostrar un mensaje de alerta si no se ingresó un nombre de especialidad
+                // Mostrar un mensaje de alerta si no se ingresó un nombre de categoria
                 mensajeR = "Es necesario que llene todos los campos";
 
                 // Mostrar el mensaje de alerta en la etiqueta correspondiente

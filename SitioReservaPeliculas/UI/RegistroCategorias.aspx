@@ -32,12 +32,12 @@
                 </div>
                 <div class="card-body">
                     <form id="form2" runat="server">
-                        <!-- Campo para ingresar nueva especialidad -->
+                        <!-- Campo para ingresar nueva categorias -->
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Ingrese Nueva Categoria"></asp:Label>
                             <asp:TextBox ID="TextBox_Nombre" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <!-- Botón para registrar la nueva especialidad -->
+                        <!-- Botón para registrar la nueva categorias -->
                         <asp:Button ID="Button_Registrar" runat="server" Text="Registrar" OnClick="Button_Registrar_Click" CssClass="btn btn-primary btn-block mt-4" />
                     </form>
                 </div>

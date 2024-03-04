@@ -47,7 +47,7 @@ namespace SitioReservaPeliculas.UI
             String mensajeR = "";
             if (TextBox_Nombre.Text != "" && TextBox_Apellido.Text != "" && TextBox_Email.Text != "" && TextBox_Password.Text != "")
             {
-                // Llamada al método del servicio para registrar un paciente
+                // Llamada al método del servicio para registrar un cliente
                 mensajeR = cliente.registrarCliente(TextBox_Nombre.Text, TextBox_Apellido.Text, TextBox_Email.Text, TextBox_Password.Text);
                 Label_Info.Text = mensajeR;
 

@@ -47,7 +47,7 @@
                                 </li>
                             </ul>
 
-                            <!--ESPECIALIDADES-->
+                            <!--CATEGORIAS-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="RegistroCategorias.aspx" role="button" data-bs-toggle="dropdown">Categorias
                                 </a>
@@ -83,7 +83,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="RegistroReservas.aspx">Generación de Reservas de Cine
+                                        <a class="dropdown-item" href="RegistroReservas.aspx">Registro de Reservas de Peliculas
                                         </a>
                                     </li>
                                     <li>
