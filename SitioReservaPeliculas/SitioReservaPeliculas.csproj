@@ -168,6 +168,8 @@
     <Content Include="css\stylesLogin.css" />
     <Content Include="css\stylesRegister.css" />
     <Content Include="img\1.jpg" />
+    <Content Include="img\admin.png" />
+    <Content Include="img\administrador.png" />
     <Content Include="img\avataaars.svg" />
     <Content Include="img\cabeza.png" />
     <Content Include="img\duna.jpg" />

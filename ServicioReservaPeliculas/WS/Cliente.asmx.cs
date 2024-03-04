@@ -151,7 +151,7 @@ namespace ServicioReservaPeliculas.WS
                 }
                 catch (Exception ex)
                 {
-                    return "Cliente Referenciado en una cita, no se logró eliminar registro";
+                    return "Cliente Referenciado en una reserva, no se logró eliminar registro";
                 }
 
             }

@@ -19,9 +19,9 @@
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container-fluid">
                 <div class="logo">
-                    <a href="InicioCitaSalud.aspx">
+                    <a href="InicioReservaPelicula.aspx">
                         <img src="../img/palomitas-de-maiz.ico" alt="" style="height: 80px; width: 80px" /></a>
-                    <a href="InicioCitaSalud.aspx" class="navbar-brand">CINEMAK</a>
+                    <a href="InicioReservaPelicula.aspx" class="navbar-brand">CINEMAK</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
                     <span class="navbar-toggler-icon"></span>
@@ -107,17 +107,18 @@
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="../img/fondoMedicos.png" alt="..." />
+            <img class="masthead-avatar mb-5" src="../img/admin.png" alt="..." />
             <!-- Masthead Heading-->
             <h1 class="masthead-heading text-uppercase mb-0">Bienvenido Administrador</h1>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-stethoscope"></i></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
+           
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">Cita Salud</p>
+            <p class="masthead-subheading font-weight-light mb-0"></p>
         </div>
     </header>
 </body>
